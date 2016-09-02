@@ -1,9 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="rpsApp">
 <head>
   <title>ClearScore Test: RPS</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/controllers/rpsController.js"></script>
 </head>
-<body>
+<body ng-controller="rpsController as RPS">
+  <main>
+    <h1>Rock, Paper, or Scissors?</h1>
 
+    <p>A steam-powered bot has challenged you to a game. <strong>Rock</strong> beats <strong>scissors</strong>, <strong>scissors</strong> beats <strong>paper</strong>, and <strong>paper</strong> beats <strong>rock</strong>.</p>
+
+    <div class="scoreboard">
+      <h2>Scoreboard</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td id="humanScore">0</td>
+            <td id="computerScore">0</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>You</th>
+            <th>Bot</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <h2>Choose Wisely</h2>
+
+    <button id="rock" ng-click="RPS.play('rock')">Rock</button>
+
+    <button id="paper" ng-click="RPS.play('paper')">Paper</button>
+
+    <button id="scissors" ng-click="RPS.play('scissors')">Scissors</button>
+
+    <div id="status"></div>
+
+    <button id="restart" ng-click="RPS.restart()">Restart</button>
+  </main>
 </body>
 </html>

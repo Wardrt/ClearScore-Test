@@ -24,7 +24,7 @@ function rpsController() {
       this.evaluate();
       this.updateScoreboard();
       this.updateStatus();
-      this.winner();
+      this.result();
     }
 }
 
@@ -71,9 +71,10 @@ function rpsController() {
 
   this.removeStatus = function() {
     document.getElementById('status').innerText = "";
+    document.getElementById('result').innerText = "";
   }
 
-  this.winner = function() {
+  this.result = function() {
     if (this.userScore > this.botScore) {
       document.getElementById('result').innerText = "You Win! Hit Restart to play again.";
     } else if (this.botScore > this.userScore) {

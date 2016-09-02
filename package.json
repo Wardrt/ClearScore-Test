@@ -1,0 +1,28 @@
+{
+  "name": "clearscore_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wardrt/ClearScore-Test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wardrt/ClearScore-Test/issues"
+  },
+  "homepage": "https://github.com/Wardrt/ClearScore-Test#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.0",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.2.9",
+    "mongoose": "^4.5.10",
+    "morgan": "^1.7.0"
+  }
+}
